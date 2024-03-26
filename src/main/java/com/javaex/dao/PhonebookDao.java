@@ -38,7 +38,6 @@ public class PhonebookDao {
 		System.out.println("PhonebookDao.personSelectModifyForm()");
 
 		PersonVo personVo = sqlSession.selectOne("phonebook.personSelectModifyForm", no);
-		System.out.println(personVo);
 		
 		return personVo;
 	}
