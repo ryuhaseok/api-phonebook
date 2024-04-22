@@ -1,4 +1,4 @@
-name: Deploy GuestbookApp
+name: Deploy phonebookApp
 
 on:
   push:
@@ -44,6 +44,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             sudo docker pull ryuhaseok/phonebook:latest
-            sudo docker stop guestbook || true
-            sudo docker rm guestbook || true
+            sudo docker stop phonebook || true
+            sudo docker rm phonebook || true
             sudo docker run -d --name phonebook-p 9000:9000 ryuhaseok/phonebook:latest
